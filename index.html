@@ -452,13 +452,13 @@
                         parent.querySelectorAll('.accordion-header').forEach(otherAccordion => {
                             if (otherAccordion !== accordion) {
                                 otherAccordion.nextElementSibling.classList.remove('open');
-                                otherAccordion.querySelector('svg').classList.remove('rotate-180');
+                                otherAccordion.querySelector('svg')?.classList.remove('rotate-180');
                             }
                         });
                     }
 
                     content.classList.toggle('open');
-                    icon.classList.toggle('rotate-180');
+                    icon?.classList.toggle('rotate-180');
                 });
             });
 
