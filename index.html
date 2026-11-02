@@ -387,7 +387,7 @@
                      </div>
                       <div class="border border-slate-200 rounded-lg">
                         <div class="accordion-header p-3"><strong>Unstable Bradyarrhythmia:</strong> Atropine & Pacing</div>
-                        <div class="accordion-content px-3"><p>Atropine 500mcg IV (max 3mg). If ineffective, transcutaneous pacing or isoprenaline/adrenaline infusion as a bridge to definitive treatment.</p></div>
+                        <div class="accordion-content px-3"><p>Atropine 500mcg IV (max 3mg). If ineffective, transcutaneous pacing or isoprenaline/adrenaline infusion as a bridge to definitive treatment.</p><p class="mt-1"><strong>Exception:</strong> Do not give atropine to patients with high-degree atrioventricular block and wide QRS. It is ineffective and may worsen the block.</p></div>
                      </div>
                       <div class="border border-slate-200 rounded-lg">
                         <div class="accordion-header p-3"><strong>Status Epilepticus (>5 mins):</strong> Benzodiazepines then AEDs</div>
@@ -452,13 +452,13 @@
                         parent.querySelectorAll('.accordion-header').forEach(otherAccordion => {
                             if (otherAccordion !== accordion) {
                                 otherAccordion.nextElementSibling.classList.remove('open');
-                                otherAccordion.querySelector('svg').classList.remove('rotate-180');
+                                otherAccordion.querySelector('svg')?.classList.remove('rotate-180');
                             }
                         });
                     }
 
                     content.classList.toggle('open');
-                    icon.classList.toggle('rotate-180');
+                    icon?.classList.toggle('rotate-180');
                 });
             });
 
